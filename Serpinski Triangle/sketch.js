@@ -1,4 +1,3 @@
-var N = 12;
 let slider;
 
 function setup()
