@@ -1,9 +1,8 @@
-var N = 12;
 let slider;
 
 function setup()
 {
-  createCanvas(800, 800);
+  createCanvas(16000, 16000);
   slider = createSlider(2, 10, 5, 1);
   slider.position(10, 10);
 }
@@ -11,14 +10,14 @@ function setup()
 function draw()
 {
   background(0);
-  //noLoop();
+  noLoop();
   noStroke();
   fill(255);
 
   translate(width / 2, height);
   triangle(-width / 2, 0, 0, -height, width / 2, 0);
-  fillTriangle(width / 2, height / 2, 1, slider.value());
-  //save("SerpinskiTriangle.png");
+  fillTriangle(width / 2, height / 2, 1, 12);
+  save("SerpinskiTriangle.png");
 }
 
 function fillTriangle(w, h, iter, N) {
@@ -42,3 +41,4 @@ function fillTriangle(w, h, iter, N) {
     pop();
   }
 }
+
